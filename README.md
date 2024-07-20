@@ -29,7 +29,7 @@ This guide helps convert Labelstudio export and video data into YOLO training da
    sudo apt install ffmpeg
 
 7. Clone the project 
-   git clone https://github.com/anjum08110/predictive_Analytics_project.git
+   git clone https://github.com/Raza0323/predictive_analytics_raza.git
 
 8. Create and Activate Virtual Environment
    - Follow the [Virtual Environments Guide](https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/)
@@ -63,29 +63,29 @@ This guide helps convert Labelstudio export and video data into YOLO training da
    - Name it something like frames
 
 3. Run Script to Create YOLO Dataset
-   python 1_frames.py -l <Path-of-1A_anjum_data.json> -v <Path-of-anjum_video> -o <Path-of-the-frames-folder> 
+   python 1_frames.py -l <Path-of-json-file> -v <Path-of-video> -o <Path-of-the-frames-folder> 
    
 
 4. Edit Dataset Path in Ultralytics Configuration
    - Open settings.yaml in /home/.config/Ultralytics
    - Reference your newly created folder based on settings.yaml
-   - Change your 2A_data.yaml according to your data
+   - Change your dataset.yaml according to your data
 
 5. Train YOLO Model
-   - python 2_train_yolo.py
+   - python train_yolo.py
    
 
 6. Validate YOLO Model
-  python3 3_yolo_inference.py <Path-of-the-anjum_vedio> -m n -t detect -p
+  python3 3_yolo_inference.py <Path-of-the-vedio> -m n -t detect -p
    
 7. Access the Video
-  - Navigate to the file "anjum_video_output.mp4" 
-  - Open the file "anjum_video_output.mp4" in VLC Player
+  - Navigate to the file "output6.mp4" 
+  - Open the file "output6.mp4" in VLC Player
   - You can see the labeled data in the video
 
 
 8. The link to the output Video
-   - https://label.aitools.starwit-infra.de/projects/9/data?tab=10
+   - https://label.aitools.starwit-infra.de/projects/12/data?tab=13&task=49
 
 
 
